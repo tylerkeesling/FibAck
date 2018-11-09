@@ -1,9 +1,9 @@
 package com.tylerkeesling;
 
 public class Fibonacci {
-  int callsToTable = 0; // calls to table from optimizedFib
-  int optimizedCount = 0; // count for fib
-  int unoptomizedCount = 0; // count for optimizedFib
+  int tableAccesses = 0; // calls to table from optimizedFib
+  int callsWithTable = 0; // count for fib
+  int callsWithoutTable = 0; // count for optimizedFib
   int[] lookupTable = new int[31];
 
   // constructor
@@ -23,7 +23,7 @@ public class Fibonacci {
 
   private int fib(int n) {
     // increase count by 1 every time it is entered
-    this.unoptomizedCount++;
+    this.callsWithoutTable++;
 
     // base case; n is 1 or 2, return 1
     if (n <= 2) {
@@ -39,22 +39,23 @@ public class Fibonacci {
    */
   public int runOptimizedFib(int n) {
     // System.out.println("Optimized Fibonacci stub");
+    this.callsWithTable++; // count first call
     return optimizedFib(n);
   }
 
   private int optimizedFib(int n) {
-    if (this.lookupTable[n] == 0) {
-      this.optimizedCount++;
 
-      this.callsToTable++;
+    if (lookupTable[n] == 0) { // call to table
 
-      this.lookupTable[n] = optimizedFib(n - 1) + optimizedFib(n - 2);
+      lookupTable[n] = optimizedFib(n - 1) + optimizedFib(n - 2); // two method calls
+      callsWithTable += 2; // count the two calls above
 
-      return this.lookupTable[n];
+      tableAccesses += 3; // three total table calls
+      return lookupTable[n]; // third table call
     } else {
-      this.callsToTable++;
 
-      return lookupTable[n];
+      tableAccesses++;
+      return lookupTable[n]; // call to table
     }
   }
 }

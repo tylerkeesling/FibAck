@@ -1,0 +1,150 @@
+fib(1) = 1
+calls without table: 1
+calls with table: 1
+table look-ups: 1
+
+fib(2) = 1
+calls without table: 1
+calls with table: 1
+table look-ups: 1
+
+fib(3) = 2
+calls without table: 3
+calls with table: 3
+table look-ups: 5
+
+fib(4) = 3
+calls without table: 5
+calls with table: 5
+table look-ups: 9
+
+fib(5) = 5
+calls without table: 9
+calls with table: 7
+table look-ups: 13
+
+fib(6) = 8
+calls without table: 15
+calls with table: 9
+table look-ups: 17
+
+fib(7) = 13
+calls without table: 25
+calls with table: 11
+table look-ups: 21
+
+fib(8) = 21
+calls without table: 41
+calls with table: 13
+table look-ups: 25
+
+fib(9) = 34
+calls without table: 67
+calls with table: 15
+table look-ups: 29
+
+fib(10) = 55
+calls without table: 109
+calls with table: 17
+table look-ups: 33
+
+fib(11) = 89
+calls without table: 177
+calls with table: 19
+table look-ups: 37
+
+fib(12) = 144
+calls without table: 287
+calls with table: 21
+table look-ups: 41
+
+fib(13) = 233
+calls without table: 465
+calls with table: 23
+table look-ups: 45
+
+fib(14) = 377
+calls without table: 753
+calls with table: 25
+table look-ups: 49
+
+fib(15) = 610
+calls without table: 1219
+calls with table: 27
+table look-ups: 53
+
+fib(16) = 987
+calls without table: 1973
+calls with table: 29
+table look-ups: 57
+
+fib(17) = 1597
+calls without table: 3193
+calls with table: 31
+table look-ups: 61
+
+fib(18) = 2584
+calls without table: 5167
+calls with table: 33
+table look-ups: 65
+
+fib(19) = 4181
+calls without table: 8361
+calls with table: 35
+table look-ups: 69
+
+fib(20) = 6765
+calls without table: 13529
+calls with table: 37
+table look-ups: 73
+
+fib(21) = 10946
+calls without table: 21891
+calls with table: 39
+table look-ups: 77
+
+fib(22) = 17711
+calls without table: 35421
+calls with table: 41
+table look-ups: 81
+
+fib(23) = 28657
+calls without table: 57313
+calls with table: 43
+table look-ups: 85
+
+fib(24) = 46368
+calls without table: 92735
+calls with table: 45
+table look-ups: 89
+
+fib(25) = 75025
+calls without table: 150049
+calls with table: 47
+table look-ups: 93
+
+fib(26) = 121393
+calls without table: 242785
+calls with table: 49
+table look-ups: 97
+
+fib(27) = 196418
+calls without table: 392835
+calls with table: 51
+table look-ups: 101
+
+fib(28) = 317811
+calls without table: 635621
+calls with table: 53
+table look-ups: 105
+
+fib(29) = 514229
+calls without table: 1028457
+calls with table: 55
+table look-ups: 109
+
+fib(30) = 832040
+calls without table: 1664079
+calls with table: 57
+table look-ups: 113
+

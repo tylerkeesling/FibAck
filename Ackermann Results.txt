@@ -1,0 +1,112 @@
+ack(0, 0) = 1
+calls without table: 1
+calls with table: 1
+table look-ups: 2
+out of bounds: 0
+y max: 0
+
+ack(0, 1) = 2
+calls without table: 1
+calls with table: 1
+table look-ups: 2
+out of bounds: 0
+y max: 1
+
+ack(0, 2) = 3
+calls without table: 1
+calls with table: 1
+table look-ups: 2
+out of bounds: 0
+y max: 2
+
+ack(0, 3) = 4
+calls without table: 1
+calls with table: 1
+table look-ups: 2
+out of bounds: 0
+y max: 3
+
+ack(1, 0) = 2
+calls without table: 2
+calls with table: 2
+table look-ups: 2
+out of bounds: 0
+y max: 1
+
+ack(1, 1) = 3
+calls without table: 5
+calls with table: 3
+table look-ups: 2
+out of bounds: 0
+y max: 2
+
+ack(1, 2) = 4
+calls without table: 9
+calls with table: 3
+table look-ups: 2
+out of bounds: 0
+y max: 3
+
+ack(1, 3) = 5
+calls without table: 13
+calls with table: 3
+table look-ups: 2
+out of bounds: 0
+y max: 4
+
+ack(2, 0) = 3
+calls without table: 8
+calls with table: 2
+table look-ups: 2
+out of bounds: 0
+y max: 2
+
+ack(2, 1) = 5
+calls without table: 25
+calls with table: 3
+table look-ups: 2
+out of bounds: 0
+y max: 4
+
+ack(2, 2) = 7
+calls without table: 51
+calls with table: 3
+table look-ups: 2
+out of bounds: 0
+y max: 6
+
+ack(2, 3) = 9
+calls without table: 85
+calls with table: 3
+table look-ups: 2
+out of bounds: 0
+y max: 8
+
+ack(3, 0) = 5
+calls without table: 28
+calls with table: 2
+table look-ups: 2
+out of bounds: 0
+y max: 4
+
+ack(3, 1) = 13
+calls without table: 209
+calls with table: 3
+table look-ups: 2
+out of bounds: 0
+y max: 12
+
+ack(3, 2) = 29
+calls without table: 1079
+calls with table: 3
+table look-ups: 2
+out of bounds: 0
+y max: 28
+
+ack(3, 3) = 61
+calls without table: 4861
+calls with table: 3
+table look-ups: 2
+out of bounds: 0
+y max: 60
+
