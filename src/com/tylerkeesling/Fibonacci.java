@@ -43,22 +43,18 @@ public class Fibonacci {
   }
 
   private int optimizedFib(int n) {
-    this.optimizedCount++;
-
     if (this.lookupTable[n] == 0) {
+      this.optimizedCount++;
+
       this.callsToTable++;
+
       this.lookupTable[n] = optimizedFib(n - 1) + optimizedFib(n - 2);
+
+      return this.lookupTable[n];
     } else {
       this.callsToTable++;
+
       return lookupTable[n];
     }
-
-    // base case; n is 1 or 2, return 1
-    if (n <= 2) {
-      return 1;
-    }
-
-    // recursive case
-    return optimizedFib(n - 1) + optimizedFib(n - 2);
   }
 }
