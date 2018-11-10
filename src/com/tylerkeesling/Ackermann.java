@@ -47,28 +47,41 @@ public class Ackermann {
     return optimizedAck(x, y);
   }
 
-  private int optimizedAck(int x, int y) {
+  private int optimizedAck(int x, int y) throws StackOverflowError {
     if (y > yMax) { // check incoming y and compare value to yMax
       yMax = y; // set yMax to the new y
     }
 
-    if (lookupTable[x][y] == 0) {
+    // testing if y is IndexOutOfBounds for the lookup table
+    if (y > lookupTable[0].length - 1) {
+      tableAccesses++; // count table access above
+      outOfBounds++; // count y going out of bounds
       if (x == 0) { // base case where x is equal to 0
+        return y + 1;
+      } else {
+        callsWithTable += 2;
+        return optimizedAck(x - 1, optimizedAck(x, y - 1));
+      }
+    }
 
-        tableAccesses += 2;
+    if (lookupTable[x][y] == 0) {
+      tableAccesses++; // count the table access above
+
+      if (x == 0) { // base case where x is equal to 0
+        tableAccesses++;
         lookupTable[x][y] = y + 1;
         return lookupTable[x][y];
 
       } else if (y == 0) {
         callsWithTable++;
-        tableAccesses +=2;
-        lookupTable[x][y] = ack(x - 1, 1);
+        tableAccesses++;
+        lookupTable[x][y] = optimizedAck(x - 1, 1);
         return lookupTable[x][y];
 
       } else {
         callsWithTable += 2;
-        tableAccesses += 2;
-        lookupTable[x][y] = ack(x - 1, ack(x, y - 1));
+        tableAccesses++;
+        lookupTable[x][y] = optimizedAck(x - 1, optimizedAck(x, y - 1));
         return lookupTable[x][y];
       }
     }

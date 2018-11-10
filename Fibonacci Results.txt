@@ -1,3 +1,7 @@
+Authored by Tyler Keesling
+
+Fibonacci Results
+
 fib(1) = 1
 calls without table: 1
 calls with table: 1
