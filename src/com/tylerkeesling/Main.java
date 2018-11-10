@@ -30,13 +30,13 @@ public class Main {
 
       for (int i = 1; i < 31; i++) {
         Fibonacci fib = new Fibonacci();
-        int result = fib.runFib(i);
-        fib.runOptimizedFib(i);
+        int result = fib.runOptimizedFib(i);
+        fib.runFib(i);
 
         pw.println("fib(" + i + ") = " + result);
         pw.println("calls without table: " + fib.callsWithoutTable);
         pw.println("calls with table: " + fib.callsWithTable);
-        pw.println("table look-ups: " + fib.tableAccesses + "\n");
+        pw.println("table accesses: " + fib.tableAccesses + "\n");
       }
 
       pw.close();
@@ -70,9 +70,7 @@ public class Main {
 
           try {
             Ackermann ack = new Ackermann();
-            // int result = ack.runAck(x, y);
             int result = ack.runOptimizedAck(x, y);
-            // ack.runOptimizedAck(x, y);
             ack.runAck(x, y);
 
             pw.println("ack(" + x + ", " + y + ") = " + result);
@@ -108,7 +106,7 @@ public class Main {
   }
 
   public static void main(String[] args) {
-    // runFibonacci();
+    runFibonacci();
     runAckermann();
   }
 }
