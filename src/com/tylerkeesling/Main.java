@@ -105,8 +105,70 @@ public class Main {
     }
   }
 
+  public static void fibTime() {
+    long startTime, endTime;
+
+    System.out.println("Fibonacci");
+
+    startTime = System.nanoTime();
+    for (int i = 1; i < 31; i++) {
+      Fibonacci fib = new Fibonacci();
+      fib.runFib(i);
+    }
+    endTime = System.nanoTime();
+
+    System.out.println("Regular: " + (endTime - startTime) + " ns");
+
+    startTime = System.nanoTime();
+    for (int i = 1; i < 31; i++) {
+      Fibonacci fib = new Fibonacci();
+      fib.runOptimizedFib(i);
+    }
+    endTime = System.nanoTime();
+
+    System.out.println("Opt: " + (endTime - startTime) + " ns");
+  }
+
+  public static void ackTime() {
+    long startTime, endTime;
+
+    System.out.println("\nAckermann: ");
+
+    startTime = System.currentTimeMillis();
+    for (int x = 0; x < 5; x++) {
+      for (int y = 0; y < 16; y++) {
+        try {
+          Ackermann ack = new Ackermann();
+          ack.runAck(x, y);
+        } catch (StackOverflowError e) {
+          break;
+        }
+      }
+    }
+    endTime = System.currentTimeMillis();
+
+    System.out.println("Regular: " + (endTime - startTime) + " ms");
+
+    startTime = System.currentTimeMillis();
+    for (int x = 0; x < 5; x++) {
+      for (int y = 0; y < 16; y++) {
+        try {
+          Ackermann ack = new Ackermann();
+          ack.runOptimizedAck(x, y);
+        } catch (StackOverflowError e) {
+          break;
+        }
+      }
+    }
+    endTime = System.currentTimeMillis();
+
+    System.out.println("Opt: " + (endTime - startTime) + " ms");
+  }
+
   public static void main(String[] args) {
-    runFibonacci();
-    runAckermann();
+    // runFibonacci();
+    // runAckermann();
+    fibTime();
+    ackTime();
   }
 }
