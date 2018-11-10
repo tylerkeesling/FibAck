@@ -1,5 +1,14 @@
 package com.tylerkeesling;
 
+/*
+ *  Author: Tyler Keesling
+ *  Project: #7 FibAck
+ *  Date: 10 November 2018
+ *  Class: Main
+ *  Description: This Main class is the driver for the application. It runs both Fib and Ack equations and will
+ *               print the designated values into a file
+ */
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

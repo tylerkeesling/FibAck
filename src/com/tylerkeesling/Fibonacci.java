@@ -1,5 +1,15 @@
 package com.tylerkeesling;
 
+/*
+ *  Author: Tyler Keesling
+ *  Project: #7 FibAck
+ *  Date: 10 November 2018
+ *  Class: Fibonacci
+ *  Description: The Fibonacci class has 4 methods, 2 public and 2 private. This method will run the Fibonacci equation
+ *               using no memoization and using memoization
+ *  Limitations: The lookup table is limited to a length of 31
+ */
+
 public class Fibonacci {
   int tableAccesses = 0; // calls to table from optimizedFib
   int callsWithTable = 0; // count for fib

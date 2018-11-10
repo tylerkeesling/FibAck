@@ -1,15 +1,29 @@
 package com.tylerkeesling;
 
+/*
+ *  Author: Tyler Keesling
+ *  Project: #7 FibAck
+ *  Date: 10 November 2018
+ *  Class: Ackermann
+ *  Description: The Ackermann class has 4 methods, 2 public and 2 private. This method will run the Ackermann equation
+ *               using no memoization and using memoization
+ *  Limitations: The lookup table is limited to a y or 101
+ */
+
 public class Ackermann {
   int yMax = 0; // max y that threw out of bounds
   int outOfBounds = 0; // number of out of bounds calls
+  int[][] lookupTable; // declaration of lookup table that instantiates in the constructor
   int tableAccesses = 0; // calls to table from optimizedAck
   int callsWithTable = 0; // count for ack
   int callsWithoutTable = 0; // count for optimizedAck
-  int[][] lookupTable = new int[5][101];
 
   // constructor
-  public Ackermann() {}
+  public Ackermann() {
+    int xLength = 5; // no magic nums
+    int yLength = 101;
+    this.lookupTable = new int[xLength][yLength];
+  }
 
   /**
    * **********************************************************************************************
