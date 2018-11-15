@@ -78,25 +78,27 @@ public class Ackermann {
       }
     }
 
-    if (lookupTable[x][y] == 0) {
+    if (lookupTable[x][y] == 0) { // if doesnt exist in table
       tableAccesses++; // count the table access above
 
       if (x == 0) { // base case where x is equal to 0
         tableAccesses++;
         lookupTable[x][y] = y + 1;
-        return lookupTable[x][y];
+        return y + 1;
 
       } else if (y == 0) {
         callsWithTable++;
         tableAccesses++;
-        lookupTable[x][y] = optimizedAck(x - 1, 1);
-        return lookupTable[x][y];
+        int result = optimizedAck(x - 1, 1);
+        lookupTable[x][y] = result;
+        return result;
 
       } else {
         callsWithTable += 2;
         tableAccesses++;
-        lookupTable[x][y] = optimizedAck(x - 1, optimizedAck(x, y - 1));
-        return lookupTable[x][y];
+        int result = optimizedAck(x - 1, optimizedAck(x, y - 1));
+        lookupTable[x][y] = result;
+        return result;
       }
     }
 

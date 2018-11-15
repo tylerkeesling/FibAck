@@ -415,7 +415,12 @@ table accesses: 43073075
 out of bounds: 43064893
 y max: 8188
 
-ack(3, 11) could not be computed
+ack(3, 11) = 16381
+calls without table: 178875096
+calls with table: 175602940
+table accesses: 175603254
+out of bounds: 175586980
+y max: 16380
 
 ack(3, 12) could not be computed
 
